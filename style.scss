@@ -1,0 +1,337 @@
+//import
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+//gobal variable
+$text-color: #777;
+$secondary-color: #fe980f;
+// $secondary-color: rgb(115, 100, 180);
+$font: "Comfortaa";
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: $font, Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+  color: $text-color;
+}
+
+a {
+  text-decoration: none;
+  color: $text-color;
+}
+
+li {
+  list-style: none;
+}
+
+.hrline {
+  height: 1px;
+  background-color: #ccc;
+  margin: 0 5rem;
+}
+
+//css start
+.container {
+  width: 100%;
+
+  .contact-info {
+    background-color: rgb(238, 237, 237);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 5rem;
+    cursor: pointer;
+
+    .mail-num {
+      display: flex;
+      gap: 1.25rem;
+
+      & :hover {
+        color: black;
+      }
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 1.2rem;
+
+      & :hover {
+        color: black;
+      }
+    }
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 6rem;
+
+    .nav-left {
+      color: #777;
+      line-height: 2;
+
+      .logo {
+        display: flex;
+        align-items: center;
+        // cursor: pointer;
+        > img {
+          width: 10rem;
+        }
+        & > span {
+          padding-left: 1rem;
+          font-size: 1.5rem;
+        }
+
+        & > i {
+          color: $secondary-color;
+          font-size: 3rem;
+        }
+      }
+    }
+
+    .nav-right {
+      padding-right: 1rem;
+      & > ul {
+        display: flex;
+        gap: 1.5rem;
+        & > li {
+          & > a {
+            &:hover {
+              text-decoration: underline;
+            }
+            & > i {
+              padding-right: 0.4rem;
+              color: $secondary-color;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .showcase {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    padding: 1rem 5rem;
+    justify-content: center;
+    // width: 80%;
+    .showcase-info {
+      line-height: 1.5;
+      -webkit-padding-start: 1rem;
+      font-family: $font;
+      > h1 {
+        > span {
+          color: $secondary-color;
+        }
+        color: rgb(131, 129, 129);
+        font-size: 3.5rem;
+      }
+
+      .btn-shop {
+        display: inline-block;
+        margin-top: 0.7rem;
+        cursor: pointer;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 0.7rem 1rem;
+
+        > button {
+          border: none;
+          outline: none;
+          background-color: transparent;
+          > a {
+            font-family: $font;
+            font-weight: bold;
+            font-size: 1rem;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            color: rgb(129, 127, 127);
+            &:hover {
+              color: $secondary-color;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .main-content {
+    display: flex;
+    padding: 0 2rem;
+    margin-top: -2rem;
+    // justify-content: center;
+    // align-items: center;
+
+    .lists-left {
+      padding: 0 5rem;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      // justify-content: center;
+      // align-items: center;
+      gap: 5rem;
+      .list {
+        line-height: 2;
+        > ul {
+          > li {
+            > a {
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+
+        > h3 {
+          color: $secondary-color;
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    .lists-right {
+      > ul {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+      }
+      .product-wrapper {
+        border: 1px solid #ccc;
+
+        .products {
+          .product-details {
+            text-align: center;
+            line-height: 1.25;
+            > h3 {
+              color: $secondary-color;
+              font-size: 1.75rem;
+            }
+            > div {
+              font-weight: bold;
+            }
+            > button {
+              margin: 0.5rem 0rem;
+              padding: 0.5rem 1.5rem;
+              border: none;
+              font-family: $font;
+              font-weight: bold;
+              border-radius: 10px;
+              background-color: $secondary-color;
+              color: white;
+              &:hover {
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+      .product-actions {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #ccc;
+
+        > button {
+          padding: 0.3rem 0.4rem;
+          outline: none;
+          border: none;
+          background-color: #ccc;
+          cursor: pointer;
+          font-family: $font;
+
+          &:hover {
+            background-color: $secondary-color;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    display: flex;
+    background-color: #ccc;
+    margin-top: 1rem;
+    justify-content: space-between;
+    line-height: 2;
+    padding: 1rem 2rem;
+    .list {
+      ul {
+        > h3 {
+          color: black;
+        }
+        > li {
+          & :hover {
+            // text-decoration: underline;
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+
+    .Contact-form {
+      line-height: 1.7;
+      > form {
+        display: flex;
+        flex-direction: column;
+        > h3 {
+          color: black;
+        }
+        > p {
+          width: 15rem;
+        }
+        .input-control {
+          display: flex;
+          border: 1px solid rgb(87, 86, 86);
+          border-radius: 5px;
+          align-items: center;
+          padding: 0.5rem 1rem;
+          gap: 0.3rem;
+
+          > i {
+            color: #fcfcfc;
+            font-size: 1.5rem;
+          }
+          > input {
+            border: none;
+            outline: none;
+            width: 100%;
+            background-color: #ccc;
+            color: white;
+          }
+        }
+        #submit {
+          padding: 0.5rem 1rem;
+          text-align: center;
+          margin-top: 0.5rem;
+          border-radius: 5px;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          &:hover {
+            box-shadow: 0px 2px 10px rgb(160, 158, 158);
+          }
+        }
+      }
+    }
+  }
+  .copyright {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: rgb(112, 112, 112);
+    color: white;
+  }
+}
