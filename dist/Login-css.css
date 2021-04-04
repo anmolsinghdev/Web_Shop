@@ -1,119 +1,152 @@
+:root {
+  --primary-color: #132845;
+  --bg-color: #faebeb;
+  --text-light: #8e919d;
+  --link-color: #308ca2;
+}
+
 * {
-  padding: 0px;
-  margin: 0px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
-:root {
-  --bgcolor: #a985e3;
+
+/* reset */
+
+html,
+body {
+  background-color: var(--bg-color);
+  font-family: "Vollkorn", serif;
 }
-.main-box1 {
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
   display: flex;
-  top: 0px;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
-  background-color: #f3f2fc;
-  font-family: "Open Sans", sans-serif;
-}
-.mid-box {
-  border: none;
-  outline: none;
-  border-radius: 10px;
-  background-color: white;
-  box-shadow: 0px 0px 5px #b9b9bd;
-  margin: 4rem 25rem;
-}
-.mid-box2 {
-  margin: 2.5rem 2.5rem;
-  height: 85%;
-  display: flex;
-  gap: 3rem;
-}
-.mid-left {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  background-color: var(--bgcolor);
-  color: white;
-  padding-top: 3rem;
-  padding-left: 2rem;
-  width: 17rem;
-  border: none;
-  border-radius: 5px;
-}
-.fa-check {
-  border: none;
-  /* background-color: #c8b6e5; */
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  padding: 0.2rem;
-  font-size: 0.7rem;
-}
-.article {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-  width: 10rem;
-}
-h3 {
-  font-size: 14px;
-}
-p {
-  font-size: 12px;
-}
-.article-1 {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-}
-.article-2 {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-}
-.article-3 {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-}
-.mid-right {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  padding-top: 2.5rem;
-  width: 20rem;
 }
 
-span {
-  font-weight: bold;
-}
-.heading-1 {
-  padding-bottom: 1rem;
-}
-input {
-  padding-left: 0.5rem;
-  outline: none;
-  height: 2.5rem;
-
-  font-family: "Open Sans", sans-serif;
-}
-
-.checkbox {
-  padding-left: 1rem;
+.login-card {
+  background-color: #fff;
+  width: 65vw;
+  height: 50vh;
   display: flex;
   flex-direction: row;
 }
 
-.checkbox-2 {
-  padding-top: 0.7rem;
-  padding-left: 0.4rem;
-  font-weight: bold;
+.side-image,
+.side-content {
+  flex: 1;
 }
-.btn {
-  color: white;
-  padding: 0.8rem 0rem;
-  background-color: var(--bgcolor);
-  border: none;
+
+.side-image {
+  order: 2;
+  /* background: url('../img/background.jpg') no-repeat center center/cover; */
+}
+.side-image > img {
+  width: 100%;
+  height: 100%;
+}
+
+.side-content {
+  padding: 2rem;
+  align-self: center;
+  justify-self: center;
+}
+
+.side-content h2 {
+  font-size: 1.8rem;
+  color: #000;
+}
+
+.side-content p {
+  padding: 0.5rem 0;
+}
+
+.side-content input {
+  padding: 0.8rem 1rem;
+  width: 100%;
+  border: 1.5px solid #f4f4f4;
   border-radius: 5px;
-  box-shadow: 0px 0px 3px black;
-  cursor: pointer;
-  font-family: "Open Sans", sans-serif;
+}
+
+.side-content input::placeholder {
+  color: var(--text-light);
+}
+
+/* .side-content  div {
+   display: flex;
+   justify-content: space-between;
+   padding: 1rem 0;
+} */
+
+.login-link {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.social-link {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.social-link a {
+  margin: 0 0.5rem;
+}
+
+.login-link a:first-child,
+.side-content p:last-child a {
+  color: var(--link-color);
+  align-self: center;
+}
+
+.btn {
+  padding: 0.8rem 1.2rem;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #fff;
+  box-shadow: 0 0 5px teal;
+}
+
+.light-text {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.line-breaker {
+  margin: 0.8rem 0;
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  background-color: #f4f4f4;
+}
+
+.btn-light {
+  border: 1.5px solid #f4f4f4;
+  justify-self: center;
+}
+
+.side-content p:last-child {
+  text-align: center;
+}
+
+.social-link a:first-child i {
+  color: #4267b2;
+}
+
+.social-link a:last-child i {
+  color: #ec4434;
 }
